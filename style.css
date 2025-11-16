@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ===== GLOBAL ===== */
+body {
+    background: #f5ce4e;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+/* ===== BUSCADOR ===== */
+.search-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+#pokemonInput {
+    width: 300px;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#btnBuscar {
+    padding: 12px 20px;
+    border-radius: 20px;
+    background: #ff5a5a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+#btnBuscar:hover {
+    transform: scale(1.05);
+    background: #ff3b3b;
+}
+
+/* ===== CARD ===== */
+.card {
+    width: 600px;
+    margin: 50px auto;
+    /* QUITAMOS EL BACKGROUND BLANCO AQUÍ para que el JS lo aplique completamente */
+    /* La propiedad background será establecida por JavaScript (aplicarDegradado) */
+    background: transparent; 
+    border-radius: 25px;
+    padding: 35px;
+    position: relative;
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+/* Imagen */
+.pokemon-img {
+    width: 200px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    object-fit: contain;
+}
+
+/* ===== TIPOS (Tipos del Pokémon) ===== */
+.type-tag {
+    padding: 6px 12px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 6px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+/* ===================================== */
+/* 🚀 DEBILIDADES (CORREGIDO para FUSIÓN CON DEGRADADO) 🚀 */
+/* ===================================== */
+.weakness-box {
+    margin-top: 20px;
+    /* CLAVE: Fondo transparente para que el degradado de .card se vea */
+    background: transparent;
+    box-shadow: none; /* Eliminar sombra para la fusión */
+    padding: 15px 15px 10px;
+    border-radius: 15px;
+    transition: none; 
+}
+
+/* Etiqueta "Debilidades" dentro de la caja */
+.weakness-box .label {
+    font-weight: 700;
+    font-size: 14px;
+    /* Texto blanco para contrastar con el degradado de color */
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4); 
+    margin-bottom: 5px;
+}
+
+.Debilidades-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.weakness-tag {
+    /* Fondo blanco semi-transparente para que el texto resalte sobre el degradado */
+    padding: 6px 12px;
+    border-radius: 12px;
+    color: #444; 
+    background: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== INFO ===== */
+.info-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* 🎯 CLAVE: ESTE SELECTOR APLICA EL BORDE NEGRO A CADA CAJA DE INFO */
+.info-row > div {
+    /* Estilos de Borde */
+    border: 1px solid black; /* Borde negro sólido de 1 píxel */
+    border-radius: 10px;    /* Bordes redondeados para un mejor aspecto */
+    padding: 10px 5px;      /* Espacio interno para que el contenido no toque el borde */
+    /* Otros estilos... */
+    flex: 1;
+    min-width: 0;
+}
+
+
+
+
+
+.label {
+    font-weight: 700;
+    font-size: 14px;
+    color: #444;
+}
+
+.label {
+    font-weight: 700;
+    font-size: 14px;
+    color: #444;
+}
+
+/* ===== DESCRIPCIÓN ===== */
+.descripcion {
+    margin-top: 20px;
+    color: #000000;
+    line-height: 2.0;
+    font-size: 15px;
+}
+
+/* ===== STATS ===== */
+#stats p {
+    margin: 8px 0 3px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.stat-bar {
+    width: 100%;
+    height: 10px;
+    background: #eee;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.stat-fill {
+    height: 100%;
+    background: #e1b631;
+    border-radius: 10px;
+}
+
+/* ===== COLORES POR TIPO (Sin cambios) ===== */
+.type-normal {
+    background: #A8A878;
+}
+
+.type-fire {
+    background: #F08030;
+}
+
+.type-water {
+    background: #6890F0;
+}
+
+.type-electric {
+    background: #F8D030;
+}
+
+.type-grass {
+    background: #78C850;
+}
+
+.type-ice {
+    background: #98D8D8;
+}
+
+.type-fighting {
+    background: #C03028;
+}
+
+.type-poison {
+    background: #A040A0;
+}
+
+.type-ground {
+    background: #E0C068;
+}
+
+.type-flying {
+    background: #A890F0;
+}
+
+.type-psychic {
+    background: #F85888;
+}
+
+.type-bug {
+    background: #A8B820;
+}
+
+.type-rock {
+    background: #B8A038;
+}
+
+.type-ghost {
+    background: #705898;
+}
+
+.type-dragon {
+    background: #7038F8;
+}
+
+.type-dark {
+    background: #705848;
+}
+
+.type-steel {
+    background: #B8B8D0;
+}
+
+.type-fairy {
+    background: #EE99AC;
+}
