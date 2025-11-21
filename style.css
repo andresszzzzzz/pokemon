@@ -256,3 +256,96 @@ body {
 .type-fairy {
     background: #EE99AC;
 }
+/* ===================================== */
+/* 💻 MEDIA QUERIES (RESPONSIVE DESIGN) 📱 */
+/* ===================================== */
+
+/* 1. Ajustes para pantallas de hasta 700px (Tablets) */
+@media (max-width: 700px) {
+    /* Ajusta el ancho de la Card */
+    .card {
+        width: 90%; /* Ocupa casi todo el ancho */
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    /* Ajusta la posición y tamaño de la imagen */
+    .pokemon-img {
+        width: 150px; /* Reducir un poco el tamaño */
+        top: 15px;
+        right: 15px;
+    }
+
+    /* Reducir el tamaño de la fuente para el nombre */
+    #pokemonName {
+        font-size: 28px;
+    }
+
+    /* Reorganiza la fila de información a 2 columnas */
+    .info-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Reducir espacio entre elementos */
+        margin-top: 20px;
+    }
+
+    /* Reduce el tamaño del input y del botón de búsqueda */
+    #pokemonInput {
+        width: 60%;
+    }
+
+    #btnBuscar {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    /* Mueve la imagen para que no tape el texto en la parte superior,
+       cuando la columna se reduce */
+    #pokemonImg {
+        position: static; /* Mover de la esquina */
+        margin: 0 auto 15px auto; /* Centrar y añadir margen inferior */
+        display: block;
+    }
+}
+
+/* 2. Ajustes para pantallas de hasta 480px (Móviles pequeños) */
+@media (max-width: 480px) {
+    /* Centra la Card y reduce el padding */
+    .card {
+        padding: 20px;
+    }
+
+    /* Apila los elementos de la búsqueda para que se vean mejor */
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    #pokemonInput {
+        width: 80%;
+        padding: 10px;
+    }
+
+    #btnBuscar {
+        width: 80%;
+        padding: 10px;
+    }
+
+    /* Ajusta la fila de información a 1 columna */
+    .info-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Ajusta la imagen */
+    .pokemon-img {
+        width: 120px;
+    }
+
+    /* Ajusta la descripción */
+    .descripcion {
+        line-height: 1.6;
+        font-size: 14px;
+    }
+}
