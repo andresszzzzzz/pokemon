@@ -201,7 +201,8 @@ document.getElementById("btnBuscar").addEventListener("click", obtenerPokemon);
                     );
 
                     // IMPORTANTE: La etiqueta de debilidad YA NO lleva la clase de color de tipo (type-${w})
-                    weakHTML += `<span class="weakness-tag">${nombreWeakEs}</span>`;
+                    weakHTML += `<span class="weakness-tag type-${w}">${nombreWeakEs}</span>`;
+
                 }
 
                 document.getElementById("Debilidades").innerHTML = weakHTML;
