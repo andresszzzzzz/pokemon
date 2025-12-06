@@ -109,14 +109,12 @@ body {
 }
 
 .weakness-tag {
-    /* Fondo blanco semi-transparente para que el texto resalte sobre el degradado */
     padding: 6px 12px;
     border-radius: 12px;
-    color: #444; 
-    background: rgba(255, 255, 255, 0.9);
     font-weight: 600;
     text-transform: capitalize;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 /* ===== INFO ===== */
@@ -256,6 +254,26 @@ body {
 .type-fairy {
     background: #EE99AC;
 }
+/* 🎯 COLORES PARA DEBILIDADES (FIX DEFINITIVO) */
+.weakness-tag.type-normal     { background: #A8A878; }
+.weakness-tag.type-fire       { background: #F08030; }
+.weakness-tag.type-water      { background: #6890F0; }
+.weakness-tag.type-electric   { background: #F8D030; color:#444; }
+.weakness-tag.type-grass      { background: #78C850; }
+.weakness-tag.type-ice        { background: #98D8D8; color:#084c4c; }
+.weakness-tag.type-fighting   { background: #C03028; }
+.weakness-tag.type-poison     { background: #A040A0; }
+.weakness-tag.type-ground     { background: #E0C068; color:#5a4a1a; }
+.weakness-tag.type-flying     { background: #A890F0; }
+.weakness-tag.type-psychic    { background: #F85888; }
+.weakness-tag.type-bug        { background: #A8B820; }
+.weakness-tag.type-rock       { background: #B8A038; }
+.weakness-tag.type-ghost      { background: #705898; }
+.weakness-tag.type-dragon     { background: #7038F8; }
+.weakness-tag.type-dark       { background: #705848; }
+.weakness-tag.type-steel      { background: #B8B8D0; color:#333; }
+.weakness-tag.type-fairy      { background: #EE99AC; }
+
 /* ===================================== */
 /* 💻 MEDIA QUERIES (RESPONSIVE DESIGN) 📱 */
 /* ===================================== */
